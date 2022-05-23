@@ -1,8 +1,9 @@
 import { ArgumentMetadata, Injectable, PipeTransform } from '@nestjs/common';
 
 @Injectable()
+// value: string = name
 export class UpperPipe implements PipeTransform {
-  transform(name: string, metadata: ArgumentMetadata) {
-    return name.toUpperCase();
+  transform(value: string, metadata: ArgumentMetadata) {
+    return value.toUpperCase();
   }
 }
